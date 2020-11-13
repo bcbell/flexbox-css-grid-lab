@@ -1,0 +1,170 @@
+html {
+    box-sizing: border-box
+   }
+   
+   *::before, 
+   *::after {
+    box-sizing: inherit;
+   }
+   
+   :root {
+    font-size: 62.5%
+   }
+   
+   body {
+    background-color: rgb(150, 10, 150);
+    background-image: linear-gradient(to right bottom, #ce4994, #ea4f6d, #ee6944, #dc8b1b, #b9ab00, #9abd1e, #70cd43, #00db6d, #00df98, #00e2bb, #17e3d6, #5fe3e7);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(234, 235, 243);
+    font-family: 'Lato', cursive;
+
+   }
+   
+   .flex-container{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+    main{
+        width: 300px;
+       font-family: 'Amatic SC', cursive;
+       text-align: center;
+       font-size: 1.75rem;
+       background-color: #ffa56059;
+       border-radius: 10px;
+       box-shadow: 5px 5px 10px 5px black;
+       font-variant: small-caps;
+       
+   }
+
+   #name{
+       text-align: left;
+       font-family: 'Chonburi', cursive;
+       font-size: 30px;
+       border-bottom: 5px dotted green;
+       border-left: 5px dotted green;
+       border-top: 5px dotted green;
+   }
+
+    #status{
+        text-align: right;
+        font-size: 1.2 rem;
+        padding: 5px 10px 0 0;
+        font-family: 'Lato', cursive;
+    }
+
+    #occupation{
+        padding: 5px 5px 5px 0;
+        font-family: 'Lato', cursive;
+        font-variant: small-caps;
+    }
+
+    #contact{
+         display: flex;
+    }
+
+    #contact > p{
+        height: 60px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #contact > p:last-child{
+        background-color: blue;
+    }
+
+    #contact > p:last-child{
+        background-color: blue;
+    }
+
+    #brand{
+        display:none;
+        color: white;
+        background-color: rgba(0, 128, 0, 0.219);
+        border-radius: 10px 10px 10px 10px;
+        font-family: 'Handlee', cursive;
+    }
+
+    #offer{
+        padding: 16px;
+        font-family: 'Lato', cursive;
+    }
+  
+   button{
+       height:  100px;
+       width: 200px;
+       box-shadow: 0 5px 5px 5px;
+       background-color: #48c97349;
+       border-radius: 15px;
+       border: 10px white;
+   }
+
+   @media only screen and (min-width: 400px){
+ 
+    main{
+           display: grid;
+           text-align: left;
+           width: 550px;
+           grid-template-columns: 40% 60%; 
+           grid-template-rows: auto auto auto auto;
+           grid-template-areas:
+           "status name"
+           "img occupation"
+           "img brand"
+           "contact offer";
+       }
+
+       #status{
+           grid-area: status;
+           text-align: left;
+           padding: 10px 0 0 20px;
+       }
+
+       #name{
+           grid-area: name;
+           padding: 10px 0 0 10px;
+       }
+
+       img{
+           grid-area: img;
+           margin: 0 auto; 
+           border-radius: 75px;
+           filter: blur(1px);
+       }
+
+       #contact {
+           grid-area: contact;
+       }
+
+       #brand{
+           grid-area: brand;
+           display: inline;
+       }
+
+       #brand > p{
+           border-left: rgb(0, 128, 0) 5px solid;
+           border-bottom: rgba(0, 128, 0, 0.349) 5px solid;
+           border-top: rgba(0, 128, 0, 0.377) 5px solid;
+           padding: 0 20px 0 8px;
+           font-size:1.6 rem
+       }
+
+       #offer{
+           grid-area: offer;
+           font-size: 2rem;
+           padding: 10px;
+       }
+
+       #name, #occupation, #brand, #offer{
+       padding-left: 20px;
+       }
+   }
